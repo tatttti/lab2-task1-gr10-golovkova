@@ -1,8 +1,12 @@
-/* hello.c */
-#include <stdio.h>
+/* main.c */
+/* Author: Tanya Golovkova */
 
-void main (void)
-{
-	printf ("Hello World\n");
-	printf ("Goodbye World\n");
-}
+/*
+ * This file implements variant 40:
+ * reverse the order of words in a string separated by spaces and commas.
+ */
+
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h>
+
