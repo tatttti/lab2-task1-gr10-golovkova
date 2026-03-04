@@ -16,3 +16,22 @@
 /* Function prototypes */ 
 int split_words (char *str, char **words); 
 void print_reversed (char **words, int count);
+
+/*
+ * Split string into words separated by spaces and commas.
+ * Returns number of words.
+ */
+int
+split_words (char *str, char **words)
+{
+	int count = 0;
+	char *token = strtok (str, " ,");
+
+	while (token != NULL)
+		{
+			words[count++] = token;
+			token = strtok (NULL, " ,");
+		}
+
+	return count;
+}
