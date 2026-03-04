@@ -35,3 +35,18 @@ split_words (char *str, char **words)
 
 	return count;
 }
+
+/*
+ * Print words in reverse order.
+ */
+void
+print_reversed (char **words, int count)
+{
+	for (int i = count - 1; i >= 0; i--)
+		{
+			printf ("%s", words[i]);
+			if (i > 0)
+				printf (" ");
+		}
+	printf ("\n");
+}
