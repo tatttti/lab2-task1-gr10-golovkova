@@ -50,3 +50,29 @@ print_reversed (char **words, int count)
 		}
 	printf ("\n");
 }
+
+/*
+ * Entry point: reads string from command line and prints reversed words.
+ */
+int
+main (int argc, char *argv[])
+{
+	if (argc < 2)
+	{
+		printf ("Usage: %s \"string\"\n", argv[0]); 
+		return 1;
+	}
+
+	char *input = strdup (argv[1]);
+	char *words[MAX_WORDS];
+
+	printf ("Исходная строка: %s\n", argv[1]);
+
+	int count = split_words (input, words);
+
+	printf ("Результат: ");
+	print_reversed (words, count);
+
+	free (input); 
+	return 0;
+}
