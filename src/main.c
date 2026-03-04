@@ -10,3 +10,9 @@
 #include <stdlib.h> 
 #include <string.h>
 
+/* Constants */
+#define MAX_WORDS 200
+
+/* Function prototypes */ 
+int split_words (char *str, char **words); 
+void print_reversed (char **words, int count);
